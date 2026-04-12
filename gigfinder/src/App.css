@@ -1,0 +1,7 @@
+@import "./css/header.css";
+@import "./css/eventCard.css";
+
+*, body {
+  margin: 0;
+  padding: 0;
+}
