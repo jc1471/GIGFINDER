@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import FilterSection from "./FilterSection";
-import EventCard from "./EventCard";
+import Header from "../components/Header";
+import FilterSection from "../components/FilterSection";
+import EventCard from "../components/EventCard";
 import events from "../data/eventData";
 import useFilter from "../hooks/useFilterList";
 
-export default function EventSection() {
+export default function EventsPage() {
 
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({
@@ -35,22 +36,24 @@ export default function EventSection() {
 
     const displayEvents = filteredEvents.map(e =>
     <EventCard
-      key={e.id}
-      artist={e.artist}
-      city={e.city}
-      country={e.country}
-      venue={e.venue}
-      date={e.date}
-      day={e.dayOfWeek}
-      time={e.time}
-      price={e.price}
-      ticketsAvailable={e.ticketsAvailable}
-      genre={e.genre}
+        key={e.id}
+        artist={e.artist}
+        city={e.city}
+        country={e.country}
+        venue={e.venue}
+        date={e.date}
+        day={e.dayOfWeek}
+        time={e.time}
+        price={e.price}
+        ticketsAvailable={e.ticketsAvailable}
+        genre={e.genre}
+        id={e.id}
     />
   );
 
     return (
         <div className="events-page">
+            <Header />
             <FilterSection
                 setQuery={setQuery}
                 filters={filters}

@@ -1,14 +1,18 @@
 import './App.css'
-import Header from "./components/Header";
-import EventPage from "./components/EventPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EventsPage from "./pages/EventsPage";
+import EventPage from "./pages/EventPage";
+import MyTickets from "./pages/MyTickets";
 
 function App() {
-
   return (
-    <>
-      <Header />
-      <EventPage />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<EventsPage />} />
+        <Route path="/events/:id" element={<EventPage />} />
+        <Route path="/mytickets" element={<MyTickets />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
