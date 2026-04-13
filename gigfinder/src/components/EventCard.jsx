@@ -5,7 +5,6 @@ export default function EventCard({ artist, city, venue, date, time, day, countr
                 <div className="event-info-section">
                     <div className="artist-section">
                         <h1 className="artist-name">{artist}</h1>
-                        <h3 className="genre">{genre}</h3>
                     </div>
 
                     <div className="location-section">
@@ -13,8 +12,10 @@ export default function EventCard({ artist, city, venue, date, time, day, countr
                             className="flag"
                             src={country}
                         />
-                        <h2 className="city">{city}</h2>
-                        <h3 className="venue">{venue}</h3>
+                        <h2 className="city">
+                            <i className="fa fa-location"></i>
+                            {city}</h2>
+                        <h2 className="venue">{venue}</h2>
                     </div>
 
                     <div className="date-section">
@@ -24,8 +25,10 @@ export default function EventCard({ artist, city, venue, date, time, day, countr
                     </div>
                 </div>
 
-                <div className="price-section">
 
+                
+
+                <div className="availability-section">
                     {ticketsAvailable >= 100 ? (
                         <h2 className="tickets-available available">available</h2>
                         ) : ticketsAvailable >= 10 ? (
@@ -36,9 +39,12 @@ export default function EventCard({ artist, city, venue, date, time, day, countr
                         <h2 className="tickets-available 0-tickets"></h2>
                         ) : null
                     }
-
-                    <h2 className="price">€{price}</h2>
                 </div>
+            </div>
+                            
+            <div className="price-section">
+                <h3 className="genre">{genre}</h3>
+                <h2 className="price">€{price}</h2>
             </div>
             
             {ticketsAvailable !== 0 ? (

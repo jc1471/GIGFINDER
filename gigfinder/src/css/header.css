@@ -9,6 +9,8 @@ header {
 
 .site-title {
     margin-left: 2rem;
+    font-family: "Boldonse";
+    letter-spacing: 0.1rem;
 }
 
 .header-nav {

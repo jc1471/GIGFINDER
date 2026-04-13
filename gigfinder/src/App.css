@@ -1,7 +1,44 @@
 @import "./css/header.css";
 @import "./css/eventCard.css";
 
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+  --bg-main:white;
+  --surface:var(--secondary);
+  --primary: #111111;
+  --secondary: #6B7280;
+  --muted: #9CA3AF;
+  --text: #111111;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  letter-spacing: -1.5px;
+}
+
 *, body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text);
 }
