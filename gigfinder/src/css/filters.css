@@ -1,0 +1,28 @@
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.filter-by {
+    display: flex;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.filter-objects {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+

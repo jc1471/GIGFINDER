@@ -1,4 +1,4 @@
-.events-container {
+.events-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
@@ -6,7 +6,7 @@
 }
 
 .event-card {
-    background-color: var(--muted);
+    background-color: white;
     border: solid 1px var(--secondary);
     border-radius: 1rem;
     padding: 1rem;

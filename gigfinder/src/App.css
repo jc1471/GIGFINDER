@@ -1,5 +1,7 @@
 @import "./css/header.css";
-@import "./css/eventCard.css";
+@import "./css/searchBar.css";
+@import "./css/filters.css";
+@import "./css/events.css";
 
 
 .inter {
@@ -21,7 +23,8 @@
 
 
 :root {
-  --bg-main:white;
+  /* Colours */
+  --bg-main:rgb(221, 221, 221);
   --surface:var(--secondary);
   --primary: #111111;
   --secondary: #6B7280;
@@ -31,6 +34,11 @@
   font-family: "Inter", sans-serif;
   font-weight: 300;
   letter-spacing: -1.5px;
+
+  /* Shadows */
+  --shadow-sm: 5px 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0px 4px 8px 5px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 8px 20px 5px rgba(0, 0, 0, 0.12); 
 }
 
 *, body {

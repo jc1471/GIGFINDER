@@ -13,7 +13,7 @@ export default function EventCard({ artist, city, venue, date, time, day, countr
                             src={country}
                         />
                         <h2 className="city">
-                            <i className="fa fa-location"></i>
+                            <i className="fa-solid fa-pin"></i>
                             {city}</h2>
                         <h2 className="venue">{venue}</h2>
                     </div>

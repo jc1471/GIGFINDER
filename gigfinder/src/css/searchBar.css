@@ -1,0 +1,33 @@
+
+
+.search-bar {
+    background-color: white;
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-block: 2rem;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    color: grey;
+    padding: 1rem;
+    box-shadow: var(--shadow-md);
+    border-radius: 5rem;
+
+}
+
+.search-bar-input {
+    border: none;
+    width: 100%;
+    border-radius: 5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-left: 1rem;
+    color: grey;
+}
+
+input:focus {
+  outline: none;
+}
