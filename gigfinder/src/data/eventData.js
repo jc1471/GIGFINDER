@@ -2,6 +2,7 @@ const events = [
   {
     id: 1,
     artist: "Charlotte de Witte",
+    artistId: "charlotte-de-witte",
     city: "Berlin",
     country: "Germany",
     venue: "Berghain",
@@ -16,6 +17,7 @@ const events = [
   {
     id: 2,
     artist: "Charlotte de Witte",
+    artistId: "charlotte-de-witte",
     city: "Barcelona",
     country: "Spain",
     venue: "Razzmatazz",
@@ -30,6 +32,7 @@ const events = [
   {
     id: 3,
     artist: "Nina Kraviz",
+    artistId: "nina-kraviz",
     city: "Berlin",
     country: "Germany",
     venue: "Watergate",
@@ -44,6 +47,7 @@ const events = [
   {
     id: 4,
     artist: "Nina Kraviz",
+    artistId: "nina-kraviz",
     city: "Amsterdam",
     country: "Netherlands",
     venue: "Shelter",
@@ -58,6 +62,7 @@ const events = [
   {
     id: 5,
     artist: "Bicep",
+    artistId: "bicep",
     city: "Barcelona",
     country: "Spain",
     venue: "Razzmatazz",
@@ -72,6 +77,7 @@ const events = [
   {
     id: 6,
     artist: "Bicep",
+    artistId: "bicep",
     city: "London",
     country: "United Kingdom",
     venue: "Printworks",
@@ -86,6 +92,7 @@ const events = [
   {
     id: 7,
     artist: "Fred again..",
+    artistId: "fred-again..",
     city: "London",
     country: "United Kingdom",
     venue: "O2 Academy Brixton",
@@ -100,6 +107,7 @@ const events = [
   {
     id: 8,
     artist: "Fred again..",
+    artistId: "fred-again..",
     city: "Paris",
     country: "France",
     venue: "Accor Arena",
@@ -114,6 +122,7 @@ const events = [
   {
     id: 9,
     artist: "Caribou",
+    artistId: "caribou",
     city: "Barcelona",
     country: "Spain",
     venue: "Razzmatazz",
@@ -128,6 +137,7 @@ const events = [
   {
     id: 10,
     artist: "Caribou",
+    artistId: "caribou",
     city: "Paris",
     country: "France",
     venue: "Le Trianon",
@@ -142,6 +152,7 @@ const events = [
   {
     id: 11,
     artist: "Arctic Monkeys",
+    artistId: "arctic-monkeys",
     city: "Madrid",
     country: "Spain",
     venue: "WiZink Center",
@@ -156,6 +167,7 @@ const events = [
   {
     id: 12,
     artist: "Arctic Monkeys",
+    artistId: "arctic-monkeys",
     city: "Barcelona",
     country: "Spain",
     venue: "Palau Sant Jordi",
@@ -170,6 +182,7 @@ const events = [
   {
     id: 13,
     artist: "Tame Impala",
+    artistId: "tame-impala",
     city: "Barcelona",
     country: "Spain",
     venue: "Palau Sant Jordi",
@@ -184,6 +197,7 @@ const events = [
   {
     id: 14,
     artist: "Tame Impala",
+    artistId: "tame-impala",
     city: "Paris",
     country: "France",
     venue: "Accor Arena",
@@ -198,6 +212,7 @@ const events = [
   {
     id: 15,
     artist: "Disclosure",
+    artistId: "disclosure",
     city: "Amsterdam",
     country: "Netherlands",
     venue: "AFAS Live",
@@ -212,6 +227,7 @@ const events = [
   {
     id: 16,
     artist: "Disclosure",
+    artistId: "disclosure",
     city: "London",
     country: "United Kingdom",
     venue: "Alexandra Palace",
@@ -226,6 +242,7 @@ const events = [
   {
     id: 17,
     artist: "Peggy Gou",
+    artistId: "peggy-gou",
     city: "Berlin",
     country: "Germany",
     venue: "Funkhaus",
@@ -240,6 +257,7 @@ const events = [
   {
     id: 18,
     artist: "Peggy Gou",
+    artistId: "peggy-gou",
     city: "Barcelona",
     country: "Spain",
     venue: "Pacha Barcelona",
@@ -254,6 +272,7 @@ const events = [
   {
     id: 19,
     artist: "Jamie xx",
+    artistId: "jamie-xx",
     city: "London",
     country: "United Kingdom",
     venue: "Alexandra Palace",
@@ -268,6 +287,7 @@ const events = [
   {
     id: 20,
     artist: "Jamie xx",
+    artistId: "jamie-xx",
     city: "Berlin",
     country: "Germany",
     venue: "Tempodrom",
@@ -285,6 +305,7 @@ const events = [
   {
     id: 21,
     artist: "Local Noise Collective",
+    artistId: "local-noise-collective",
     city: "Barcelona",
     country: "Spain",
     venue: "Sala Apolo",
@@ -299,6 +320,7 @@ const events = [
   {
     id: 22,
     artist: "Local Noise Collective",
+    artistId: "local-noise-collective",
     city: "Barcelona",
     country: "Spain",
     venue: "Sidecar Factory Club",
@@ -313,6 +335,7 @@ const events = [
   {
     id: 23,
     artist: "Echo Drift",
+    artistId: "echo-drift",
     city: "Berlin",
     country: "Germany",
     venue: "Kantine am Berghain",
@@ -327,6 +350,7 @@ const events = [
   {
     id: 24,
     artist: "Echo Drift",
+    artistId: "echo-drift",
     city: "Amsterdam",
     country: "Netherlands",
     venue: "OT301",
@@ -341,6 +365,7 @@ const events = [
   {
     id: 25,
     artist: "Sombra Beat",
+    artistId: "sombra-beat",
     city: "Madrid",
     country: "Spain",
     venue: "Teatro Kapital",
@@ -355,6 +380,7 @@ const events = [
   {
     id: 26,
     artist: "Sombra Beat",
+    artistId: "sombra-beat",
     city: "Barcelona",
     country: "Spain",
     venue: "Input Club",
@@ -369,6 +395,7 @@ const events = [
   {
     id: 27,
     artist: "The Blaze",
+    artistId: "the-blaze",
     city: "Paris",
     country: "France",
     venue: "Le Zénith",
@@ -383,6 +410,7 @@ const events = [
   {
     id: 28,
     artist: "The Blaze",
+    artistId: "the-blaze",
     city: "Berlin",
     country: "Germany",
     venue: "Columbiahalle",
@@ -397,6 +425,7 @@ const events = [
   {
     id: 29,
     artist: "Charlotte de Witte",
+    artistId: "charlotte-de-witte",
     city: "Amsterdam",
     country: "Netherlands",
     venue: "Gashouder",
@@ -411,6 +440,7 @@ const events = [
   {
     id: 30,
     artist: "Fred again..",
+    artistId: "fred-again..",
     city: "Barcelona",
     country: "Spain",
     venue: "Primavera Sound",
@@ -425,6 +455,7 @@ const events = [
   {
     id: 31,
     artist: "Bicep",
+    artistId: "bicep",
     city: "Paris",
     country: "France",
     venue: "Le Zénith",
@@ -439,6 +470,7 @@ const events = [
   {
     id: 32,
     artist: "Caribou",
+    artistId: "caribou",
     city: "London",
     country: "United Kingdom",
     venue: "Roundhouse",
@@ -453,6 +485,7 @@ const events = [
   {
     id: 33,
     artist: "Jamie xx",
+    artistId: "jamie-xx",
     city: "Barcelona",
     country: "Spain",
     venue: "Primavera Sound",
@@ -467,6 +500,7 @@ const events = [
   {
     id: 34,
     artist: "Peggy Gou",
+    artistId: "peggy-gou",
     city: "Amsterdam",
     country: "Netherlands",
     venue: "Shelter",
@@ -481,6 +515,7 @@ const events = [
   {
     id: 35,
     artist: "Disclosure",
+    artistId: "disclosure",
     city: "Barcelona",
     country: "Spain",
     venue: "Razzmatazz",
@@ -495,6 +530,7 @@ const events = [
   {
     id: 36,
     artist: "Tame Impala",
+    artistId: "tame-impala",
     city: "London",
     country: "United Kingdom",
     venue: "The O2 Arena",
@@ -509,6 +545,7 @@ const events = [
   {
     id: 37,
     artist: "Arctic Monkeys",
+    artistId: "arctic-monkeys",
     city: "Paris",
     country: "France",
     venue: "Stade de France",
@@ -523,6 +560,7 @@ const events = [
   {
     id: 38,
     artist: "The Blaze",
+    artistId: "the-blaze",
     city: "Barcelona",
     country: "Spain",
     venue: "Razzmatazz",
@@ -537,6 +575,7 @@ const events = [
   {
     id: 39,
     artist: "Local Noise Collective",
+    artistId: "local-noise-collective",
     city: "Madrid",
     country: "Spain",
     venue: "Siroco",
@@ -551,6 +590,7 @@ const events = [
   {
     id: 40,
     artist: "Echo Drift",
+    artistId: "echo-drift",
     city: "Barcelona",
     country: "Spain",
     venue: "Sala Apolo",
