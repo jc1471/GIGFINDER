@@ -1,28 +1,126 @@
 .filter-section {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     align-self: center;
     justify-self: center;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 1rem;
+    margin-block: 2rem;
 }
 
 .filter-by {
     display: flex;
-    width: 90%;
+    flex-direction: column;
+    max-width: 100%;
     align-self: center;
     justify-self: center;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 0.75rem;
 }
 
 .filter-objects {
     display: flex;
-    width: 80%;
-    justify-content: space-evenly;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
     align-items: center;
+    margin-block: 0.75rem;
+    font-size: 0.5rem;
 }
 
+.filter {
+    margin-inline: 0.1rem;
+
+}
+
+.filter-title {
+    margin-bottom: 0.5rem;
+}
+
+.filter > select {
+    outline: none;
+    border: none;
+    padding-block: 0.2rem;
+}
+
+.filter > option {
+    outline: none;
+    border: none;
+}
+
+.reset-filters-button {
+    margin-block: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5rem;
+}
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+    .filter-section {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-self: center;
+        justify-self: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .filter-by {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        
+    }
+    
+    .filter-objects {
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .filter {
+        margin-inline: 0.1rem;
+        font-size: 0.75rem;
+    }
+    
+    .filter-title {
+        margin-bottom: 0.5rem;
+    }
+    
+    .filter > select {
+        outline: none;
+        border: none;
+        padding-block: 0.2rem;
+        font-size: 1rem;
+    }
+    
+    .filter > option {
+        outline: none;
+        border: none;
+    }
+    
+    .reset-filters-button {
+        margin-block: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 5rem;
+        font-size: 1rem;
+    }
+}

@@ -3,20 +3,56 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-block: 1rem;
+    padding-block: 0.5rem;
     border-bottom: solid 1px grey;
 }
 
 .site-title {
-    margin-left: 2rem;
+    font-size: 1.5rem;
+    margin-left: 1rem;
     font-family: "Boldonse";
     letter-spacing: 0.1rem;
 }
 
 .header-nav {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
-.menu-item {
-    margin-left: 2rem;
+.menu-bars {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.menu-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+
+    .site-title {
+        margin-left: 2rem;
+    }
+
+    .header-nav {
+        margin-right: 2rem;
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    .menu-bars {
+        display: none;
+    }
+
+    .menu-text {
+        display: flex;
+        margin-left: 2rem;
+    }
 }

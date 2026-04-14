@@ -1,67 +1,114 @@
+.events-page {
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .events-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .event-card {
+    font-size: 0.5rem;
     background-color: white;
-    border: solid 1px var(--secondary);
+    /*border: solid 1px var(--secondary);*/
     border-radius: 1rem;
-    padding: 1rem;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 10px 10px 15px -10px;
+    margin-bottom: 1rem;
 }
 
-.event-card-top {
+.event-card-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.event-card-left {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.artist-section {
+.card-artist-header {
     display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
+    align-items: end;
+    padding-top: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    background-color: rgb(195, 195, 195);
+    width: 100%;
 }
 
-.artist-name {
+.card-artist-header-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline: 0.5rem; 
+}
+
+.card-artist-header-name {
     font-family: "Archivo Black";
     border-bottom: 1px solid;
     width: auto;
+    margin-right: 2rem;
 }
 
 .genre {
     color: var(--bg-main);
-    background-color: var(--primary);
-    padding: 0.25rem 0.5rem;
+    background-color:cadetblue;
+    padding: 0.1rem 0.5rem;
     border-radius: 3rem;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0rem;
+}
+
+.event-info-section {
+    margin-left: 0.5rem;
 }
 
 .location-section {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-block: 1rem 0.2rem;
+    letter-spacing: -0.05rem;
 }
 
 .city {
-    margin-right: 1rem;
+    margin-left: 0.25rem;
 }
 
 .venue {
-
+    font-weight: 400;
 }
 
 .date-section {
     display: flex;
     margin-bottom: 1rem;
+    letter-spacing: -0.05rem;
+    color: grey;
 }
 
-.date-section > h3 {
+.date-section > .date {
     margin-right: 1rem;
+}
+
+.date-section > .day {
+    margin-right: 0.25rem;
+}
+
+.availability-section {
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0rem;
 }
 
 .available {
@@ -69,21 +116,32 @@
 }
 
 .selling-fast {
-    color: orange;
+    color: rgb(217, 141, 0);
+}
+
+.event-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .price-section {
-    display: flex;
-    justify-content: space-between;
-    margin-inline: 2rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+
 }
 
 .cta {
     align-self: center;
-    margin-block: 1rem;
-    padding: 1rem 2rem;
+    margin-bottom: 0.5rem;
     border: 1px solid;
-    border-radius: 2rem;
+    border-radius: 0.25rem;
+    letter-spacing: -0.035rem;
+    padding: 0.25rem;
+    font-weight: 500;
+    color: var(--bg-main);
 }
 
 .cta:hover {
@@ -92,8 +150,184 @@
 
 .get-tickets {
     background-color: darkgreen;
+
 }
 
 .sold-out {
     background-color: darkred;
+    padding: 0.3rem;
+}
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+    .events-page {
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .events-section {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+        margin: 1rem;
+    }
+    
+    .event-card {
+        font-size: 0.55rem;
+        background-color: white;
+        /*border: solid 1px var(--secondary);*/
+        border-radius: 1rem;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 10px 10px 15px -10px;
+        margin-bottom: 2rem;
+    }
+    
+    .event-card-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .event-card-left {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-artist-header {
+        display: flex;
+        align-items: end;
+        padding-top: 2rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    
+        background-color: rgb(195, 195, 195);
+        width: 100%;
+    }
+    
+    .card-artist-header-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-inline: 0.5rem; 
+    }
+    
+    .card-artist-header-name {
+        font-family: "Archivo Black";
+        border-bottom: 1px solid;
+        width: auto;
+        margin-right: 2rem;
+    }
+    
+    .genre {
+        color: var(--bg-main);
+        background-color:cadetblue;
+        padding: 0.1rem 0.5rem;
+        border-radius: 3rem;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0rem;
+    }
+    
+    .event-info-section {
+        margin-left: 0.5rem;
+    }
+    
+    .location-section {
+        display: flex;
+        align-items: center;
+        margin-block: 1rem 0.2rem;
+        letter-spacing: -0.05rem;
+    }
+    
+    .city {
+        margin-left: 0.25rem;
+    }
+    
+    .venue {
+        font-weight: 400;
+    }
+    
+    .date-section {
+        display: flex;
+        margin-bottom: 1rem;
+        letter-spacing: -0.05rem;
+        color: grey;
+    }
+    
+    .date-section > .date {
+        margin-right: 1rem;
+    }
+    
+    .date-section > .day {
+        margin-right: 0.25rem;
+    }
+    
+    .availability-section {
+        margin-left: 0.5rem;
+        margin-bottom: 1rem;
+        letter-spacing: -0rem;
+    }
+    
+    .available {
+        color: darkgreen;
+    }
+    
+    .selling-fast {
+        color: rgb(217, 141, 0);
+    }
+    
+    .event-card-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .price-section {
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
+    
+    }
+    
+    .cta {
+        align-self: center;
+        margin-bottom: 0.5rem;
+        border: 1px solid;
+        border-radius: 0.25rem;
+        letter-spacing: -0.035rem;
+        padding: 0.25rem;
+        font-weight: 500;
+        color: var(--bg-main);
+    }
+    
+    .cta:hover {
+        cursor: pointer;
+    }
+    
+    .get-tickets {
+        background-color: darkgreen;
+    
+    }
+    
+    .sold-out {
+        background-color: darkred;
+        padding: 0.3rem;
+    }
 }
