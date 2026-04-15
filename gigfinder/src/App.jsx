@@ -1,10 +1,15 @@
 import './App.css'
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EventsPage from "./pages/EventsPage";
 import EventPage from "./pages/EventPage";
 import MyTickets from "./pages/MyTickets";
 
 function App() {
+
+  const [myTickets, setMyTickets] = useState([]);
+  const [basketTotal, setBasketTotal] = useState(0);
+
   return (
     <BrowserRouter>
       <Routes>

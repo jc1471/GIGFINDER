@@ -50,3 +50,9 @@ body {
   background-color: var(--bg-main);
   color: var(--text);
 }
+
+a {
+  all: unset;
+  display: block; /* important so it behaves like a div */
+  cursor: pointer;
+}

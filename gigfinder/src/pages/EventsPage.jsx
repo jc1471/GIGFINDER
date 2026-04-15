@@ -7,6 +7,9 @@ import useFilter from "../hooks/useFilterList";
 
 export default function EventsPage() {
 
+    const [cartQuantity, setCartQuantity] = useState(0);
+    const [cartTotal, setCartTotal] = useState(0);
+
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({
         artist: "",
@@ -34,23 +37,17 @@ export default function EventsPage() {
         return matchesQuery && matchesFilters;
     });
 
-    const displayEvents = filteredEvents.map(e =>
+    const displayEvents = filteredEvents.map(event =>
     <EventCard
-        key={e.id}
-        artist={e.artist}
-        city={e.city}
-        country={e.country}
-        venue={e.venue}
-        date={e.date}
-        day={e.dayOfWeek}
-        time={e.time}
-        price={e.price}
-        ticketsAvailable={e.ticketsAvailable}
-        genre={e.genre}
-        id={e.id}
+        key={event.id}
+        event={event}
+        cartQuantity={cartQuantity}
+            setCartQuantity={setCartQuantity}
+            cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
     />
-  );
-
+    );
+    
     return (
         <div className="events-page">
             <Header />
