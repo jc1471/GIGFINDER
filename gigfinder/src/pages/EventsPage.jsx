@@ -7,8 +7,8 @@ import useFilter from "../hooks/useFilterList";
 
 export default function EventsPage() {
 
-    const [cartQuantity, setCartQuantity] = useState(0);
-    const [cartTotal, setCartTotal] = useState(0);
+    const [basketQuantity, setBasketQuantity] = useState(0);
+    const [basketTotal, setBasketTotal] = useState(0);
 
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({
@@ -41,10 +41,10 @@ export default function EventsPage() {
     <EventCard
         key={event.id}
         event={event}
-        cartQuantity={cartQuantity}
-            setCartQuantity={setCartQuantity}
-            cartTotal={cartTotal}
-            setCartTotal={setCartTotal}
+        basketQuantity={basketQuantity}
+            setBasketQuantity={steBasketQuantity}
+            basketTotal={basketTotal}
+            setBasketTotal={setBasketTotal}
     />
     );
     

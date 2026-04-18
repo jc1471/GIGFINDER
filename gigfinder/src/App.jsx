@@ -8,7 +8,9 @@ import MyTickets from "./pages/MyTickets";
 function App() {
 
   const [myTickets, setMyTickets] = useState([]);
+  const [myTicketsViewActive, setMyTicketsViewActive] = useState(false);
   const [basketTotal, setBasketTotal] = useState(0);
+  const [basketViewActive, setBasketViewActive] = useState(false);
 
   return (
     <BrowserRouter>

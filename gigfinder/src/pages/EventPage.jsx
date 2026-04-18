@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArtistById } from "../api/artists";
 import ArtistSection from "../components/ArtistSection";
+import AddToBasket from "../components/AddToBasket";
 import events from "../data/eventData";
 
-export default function EventPage() {
+export default function EventPage({ basketQuantity, setBasketQuantity, basketTotal, setBasketTotal }) {
 
     const { id } = useParams();
 
@@ -47,6 +48,13 @@ export default function EventPage() {
             <h3 className="time">{event.time}</h3>
                 <h3 className="day">{event.day}</h3>
             </div>
+            <AddToBasket
+                        event={event}
+                        basketTotal={basketTotal}
+                        setBasketTotal={setBasketTotal}
+                        basketQuantity={basketQuantity}
+                        setBasketQuantity={setBasketQuantity}
+                    />
         </div>
     )
 }

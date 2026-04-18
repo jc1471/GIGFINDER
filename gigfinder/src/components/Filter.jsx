@@ -7,6 +7,11 @@ export default function Filter({ filters, setFilters, field }) {
         a.localeCompare(b)
     );
 
+    const updateFilter = (e) => setFilters(prev => ({
+                    ...prev,
+                    [field]: e.target.value
+                }))
+
     return (
         <div className="filter"> 
             <h1 className="filter-title">
@@ -14,15 +19,12 @@ export default function Filter({ filters, setFilters, field }) {
             </h1>
             <select
                 value={filters[field] || field}
-                onChange={(e) => setFilters(prev => ({
-                    ...prev,
-                    [field]: e.target.value
-                }))}
+                onChange={updateFilter}
             >
 
-            <option value="all">All</option>
+                <option value="all">All</option>
             
-            {optionsSorted.map((option) => {
+                {optionsSorted.map((option) => {
                     return (
                         <option
                             key={option}

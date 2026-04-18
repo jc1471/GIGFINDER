@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import AddToCart from "./AddToCart";
+import AddToCart from "./AddToBasket";
 
-export default function EventCard({ event, cartQuantity, setCartQuantity, cartTotal, setCartTotal }) {
+export default function EventCard({ event, basketQuantity, setBasketQuantity, basketTotal, setBasketTotal }) {
     return (
         <>
             {/*<Link to={`/events/${id}`}>*/}
@@ -20,7 +20,7 @@ export default function EventCard({ event, cartQuantity, setCartQuantity, cartTo
                                 <div className="location-section">
                                     <i
                                         className="flag"
-                                        src={event-country}
+                                        src={event.country}
                                     />
                                     <h2 className="venue">{event.venue},</h2>
                                     <h2 className="city">
@@ -58,14 +58,7 @@ export default function EventCard({ event, cartQuantity, setCartQuantity, cartTo
                             ) : (<h2 className="cta sold-out">sold out</h2>)}
                         </div>
                     </div>
-                    <AddToCart
-                        event={event}
-                        setMyTickets={setMyTickets}
-                        cartTotal={cartTotal}
-                        setCartTotal={setCartTotal}
-                        cartQuantity={cartQuantity}
-                        setCartQuantity={setCartQuantity}
-                    />
+                    
                 </div>
             </a>
             {/*</Link >*/}
