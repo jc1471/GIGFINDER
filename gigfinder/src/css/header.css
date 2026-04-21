@@ -1,21 +1,33 @@
 header {
+    position:fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding-block: 0.5rem;
-    border-bottom: solid 1px grey;
+    border-bottom: solid 1px var(--muted-grey);
+    background: var(--bg-primary);
+    
 }
 
 .site-title {
     font-size: 1.5rem;
     margin-left: 1rem;
-    font-family: "Boldonse";
-    letter-spacing: 0.1rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    letter-spacing: -0.05rem;
+    color: var(--main-text);
+}
+
+.site-title-period {
+    color: var(--accent);
 }
 
 .header-nav {
     margin-right: 1rem;
+    display: flex;
+    color: var(--muted-text);
 }
 
 .menu-bars {

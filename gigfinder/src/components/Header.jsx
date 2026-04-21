@@ -1,14 +1,36 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartShopping, faTicketSimple } from '@fortawesome/free-solid-svg-icons';
 
-export default function Header() {
+export default function Header({ 
+    myTicketsViewActive,
+    setMyTicketsViewActive,
+    basketTotal,
+    basketViewActive,
+    setBasketViewActive
+}) {
+    
+    const handleMyTicketsVisible = () => {
+        myTicketsViewActive ? setMyTicketsViewActive(false) : setMyTicketsViewActive(true)
+    };
+
+    const handleBasketVisible = () => {
+        basketViewActive ? setbasketViewActive(false) : setbasketViewActive(true)
+    };
+
     return (
         <header>
-            <h1 className="site-title">GIGFINDER</h1>
+            <h1 className="site-title">GIG<span className="site-title-period">.</span>FINDER</h1>
             <nav className="header-nav">
-                <FontAwesomeIcon className="menu-bars" icon={faBars} />
-                <a className="menu-text" id="my-tickets-link">my tickets</a>
-                <a className="menu-text" id="basket-link">basket</a>
+                <div className="cart-icon-wrapper">
+                    <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
+                    <span
+                        className="cart-icon-number"
+                    >
+                        {basketTotal}
+                    </span>
+                </div> 
+                
+                <FontAwesomeIcon className="ticket-icon" icon={faTicketSimple} />
             </nav>
         </header>
     )

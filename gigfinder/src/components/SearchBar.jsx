@@ -2,6 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 export default function SearchBar({ setQuery }) {
+    
+    const handleKeywordSearch = (e) => {
+        setQuery(e.target.value)
+    };
+    
     return (
             <>
                 <form role="search" className="search-bar">
@@ -9,7 +14,7 @@ export default function SearchBar({ setQuery }) {
                 <input
                     className="search-bar-input"
                     type="search"
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={handleKeywordSearch}
                     placeholder="Search by keyword.." /> 
                 </form>
             </>

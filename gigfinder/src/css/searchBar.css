@@ -1,5 +1,5 @@
 .search-bar {
-    background-color: white;
+    background-color: var(--muted-text);
     align-self: center;
     justify-self: center;
     align-items: center;
@@ -7,10 +7,9 @@
     margin-block: 0rem;
     width: 90%;
     display: flex;
-    color: grey;
+    color: var(--main-text);
     padding: 0.5rem;
-    box-shadow: var(--shadow-md);
-    border-radius: 5rem;
+    border-radius: 1rem;
 }
 
 .search-icon {
@@ -20,13 +19,17 @@
 }
 
 .search-bar-input {
+    background-color: var(--muted-text);
+    color: var(--main-text);
     border: none;
     width: 100%;
     border-radius: 5rem;
     font-size: 1rem;
     line-height: 2rem;
     margin-left: 0.5rem;
-    color: grey;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
 }
 
 input:focus {

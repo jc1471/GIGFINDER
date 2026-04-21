@@ -4,11 +4,11 @@ export default function AddToCart({ setMyTickets, basketTotal, setBasketTotal, b
 
     const [itemQuantity, setItemQuantity] = useState(0);
 
-    let handleAddItem = () => {
+    const handleAddItem = () => {
         setItemQuantity(itemQuantity + 1)
     }
 
-    let handleSubtractItem = () => {
+    const handleSubtractItem = () => {
         setItemQuantity(
             itemQuantity > 0 ?
                 itemQuantity - 1 :

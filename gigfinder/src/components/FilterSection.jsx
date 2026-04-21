@@ -17,36 +17,37 @@ export default function FilterSection({ setQuery, filters, setFilters }) {
                 setQuery={setQuery}
                     />
             <div className="filter-by">
-                <h1>Or filter by..</h1>
                 <div className="filter-objects">
                     <Filter
                         filters={filters}
                         setFilters={setFilters}
                         field="artist"
+                        allText="artists"
                     >
-                        Artist
                     </Filter>
                     <Filter
                         filters={filters}
                         setFilters={setFilters}
                         field="city"
+                        allText="cities"
                     >
-                        City
                     </Filter>
                     <Filter
                         filters={filters}
                         setFilters={setFilters}
                         field="genre"
+                        allText="genres"
                     >
-                        Genre
                     </Filter>
                 </div>
+                {/*
                 <button
                     className="reset-filters-button"
                     onClick={resetFilters}
                 >
                     Reset filters
-                </button>
+                </button> 
+                */}
             </div>
             
 

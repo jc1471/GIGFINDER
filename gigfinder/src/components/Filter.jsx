@@ -1,6 +1,6 @@
 import events from "../data/eventData";
 
-export default function Filter({ filters, setFilters, field }) {
+export default function Filter({ filters, setFilters, field, allText }) {
 
     const options = [...new Set(events.map(event => event[field]))];
     const optionsSorted = options.sort((a, b) =>
@@ -14,15 +14,12 @@ export default function Filter({ filters, setFilters, field }) {
 
     return (
         <div className="filter"> 
-            <h1 className="filter-title">
-            {field}
-            </h1>
             <select
                 value={filters[field] || field}
                 onChange={updateFilter}
             >
 
-                <option value="all">All</option>
+                <option value="all">{`All ${allText}`}</option>
             
                 {optionsSorted.map((option) => {
                     return (

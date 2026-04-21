@@ -1,0 +1,12 @@
+.search-results-header {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    color: var(--main-text);
+    margin-inline: 1rem;
+    margin-block: 2rem;
+}
+
+.search-items-number {
+    color: var(--accent);
+    font-style: italic;
+}

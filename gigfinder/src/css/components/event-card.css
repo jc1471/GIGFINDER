@@ -1,0 +1,127 @@
+.events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-elevated);
+}
+
+.event-card {
+    background-color: var(--bg-card);
+    color: var(--main-text);
+    width: 25rem;
+    border-bottom: solid 1px var(--muted-grey);
+    font-size: 0.5rem;
+}
+
+.event-card-content {
+    width: 80%;
+    justify-self: center;
+    padding-block: 1.5rem;
+}
+
+.event-card-header {
+    display: flex;
+    border-bottom: solid 1px var(--muted-grey);
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.event-card-genre {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  border-radius: 0.15rem;
+  padding: 0.1rem 0.2rem;
+    color: var(--dim);
+    border: solid 1px var(--muted-accent);
+}
+
+.event-card-artist-name {
+    margin-top: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.075rem;
+}
+
+.event-card-artist-name:hover {
+    color: var(--accent);
+}
+
+.event-card-tour {
+    font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--muted-text);
+  font-style: italic;
+}
+
+.event-card-date {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.event-card-info-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+
+.event-card-info-component {
+}
+
+.event-card-info-component-title {
+   font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--muted-text);
+}
+
+.event-card-info-component-content {
+    font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.event-card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.event-card-price > h1 {
+ font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--muted-text);
+}
+
+.event-card-price > h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.event-card-view-button {
+font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--muted-text);
+    border: solid 0.25px var(--muted-grey);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.event-card-view-button:hover {
+    background-color: var(--accent);
+    color: var(--bg-card);
+}

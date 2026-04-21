@@ -1,0 +1,211 @@
+.event-modal {
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    width: 28rem;
+    max-height: 90svh;
+    top: 10svh;
+    background-color: var(--bg-primary);
+    color: var(--main-text);
+    border: solid 1px var(--muted-grey);
+    border-radius: 1rem;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.event-modal-close-button {
+    position:absolute;
+    right: 1rem;
+    top: 1rem;
+    color: var(--muted-grey);
+    font-size: 2rem;
+}
+
+.event-modal-close-button:hover {
+    color: var(--muted-text);
+}
+
+
+.event-modal-header {
+
+    border-bottom: solid 1px var(--muted-grey);
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+.event-modal-artist-name {
+    margin-top: 2rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: -0.075rem;
+}
+
+.event-modal-tour {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--muted-text);
+    font-style: italic;
+}
+
+.event-modal-info-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    border: solid 1px var(--muted-grey);
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+}
+
+.event-modal-about-artist {
+    margin: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px var(--muted-grey);
+}
+
+.event-modal-about-artist-title {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: -0.01rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+.event-modal-about-artist-info {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted-text); 
+}
+
+.select-tickets {
+    font-family: "DM Mono", monospace;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.075rem;
+    color: var(--accent);
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ticket-option {
+    border: 1px solid var(--muted-grey);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 2rem;
+}
+
+.option-active {
+    background-color: var(--more-muted-accent);
+    border: 1px solid var(--accent);
+}
+
+.ticket-option-left {
+    display: flex;
+    align-items: center;
+    
+}
+
+.selected-circle-icon {
+    color: var(--accent);
+    margin-right: 1.5rem;
+}
+
+.unselected-circle-icon {
+    color: var(--muted-grey);
+    margin-right: 1.5rem;
+}
+
+.ticket-option-text {
+
+}
+
+.ticket-option-title {
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+.ticket-option-description {
+    font-size: 0.75rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: var(--muted-text);
+}
+
+.ticket-option-price {
+    font-size: 1.25rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+}
+
+.event-modal-add-to-basket-section {
+    
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+}
+
+.event-modal-basket-quantity-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-modal-quantity-text {
+    font-size: 0.75rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: var(--muted-text);
+}
+
+.event-modal-basket-quantity-box {
+    display: flex;
+}
+
+.event-modal-basket-change-quantity-add {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--bg-card);
+    
+    border-radius: 1rem 0 0 1rem;
+    border: 1px solid var(--muted-grey);
+}
+
+.event-modal-basket-change-quantity-subtract {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--bg-card);
+    
+    border-radius: 0 1rem 1rem 0;
+    border: 1px solid var(--muted-grey);
+}
+
+.event-modal-basket-show-quantity {
+    padding: 0.5rem 0.8rem;
+    
+    border: 1px solid var(--muted-grey);
+    
+}
+
+.add-to-basket-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 1.5rem;
+    margin-block: 1rem 2rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    border-radius: 0.75rem;
+}

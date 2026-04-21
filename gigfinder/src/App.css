@@ -1,10 +1,32 @@
 @import "./css/header.css";
+@import "./css/components/hero.css";
 @import "./css/searchBar.css";
 @import "./css/filters.css";
-@import "./css/events.css";
+@import "./css/components//search-results-header.css";
+@import "./css/components/event-card.css";
 @import "./css/components/add-to-basket.css";
+@import "./css/components//event-modal.css";
 
 
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.dm-mono {
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Old Fonts
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -21,20 +43,22 @@
   font-weight: 400;
   font-style: normal;
 }
-
+*/
 
 :root {
   /* Colours */
-  --bg-main:rgb(221, 221, 221);
-  --surface:var(--secondary);
-  --primary: #111111;
-  --secondary: #6B7280;
-  --muted: #9CA3AF;
-  --text: #111111;
-
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  letter-spacing: -1.5px;
+  --bg-primary: #0e0d0c;
+  --bg-card: #151514;
+  --bg-elevated: #292828;
+  --accent: #f5a623;
+  --muted-accent: #f5a52386;
+  --more-muted-accent: #f5a5234d;
+  --dim: #b87a18;
+  --main-text: #f0ece4;
+  --muted-text: #7a7168;
+  --muted-grey: #7a71683d;
+  --red: #e84040;
+  --green: green;
 
   /* Shadows */
   --shadow-sm: 5px 1px 3px rgba(0, 0, 0, 0.08);
@@ -48,8 +72,8 @@
 }
 
 body {
-  background-color: var(--bg-main);
-  color: var(--text);
+  background-color: var(--bg-primary);
+  color: var(--white-text);
 }
 
 a {

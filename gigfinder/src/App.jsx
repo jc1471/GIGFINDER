@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EventsPage from "./pages/EventsPage";
+import Header from "./components/Header";
+import Main from "./pages/Main";
 import EventPage from "./pages/EventPage";
 import MyTickets from "./pages/MyTickets";
 
@@ -13,13 +13,16 @@ function App() {
   const [basketViewActive, setBasketViewActive] = useState(false);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<EventsPage />} />
-        <Route path="/events/:id" element={<EventPage />} />
-        <Route path="/mytickets" element={<MyTickets />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Header
+        myTicketsViewActive={myTicketsViewActive}
+        setMyTicketsViewActive={setMyTicketsViewActive}
+        basketTotal={basketTotal}
+        basketViewActive={basketViewActive}
+        setBasketViewActive={setBasketViewActive}
+      />
+      <Main />
+    </>
   )
 }
 
