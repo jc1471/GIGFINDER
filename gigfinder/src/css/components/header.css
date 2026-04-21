@@ -27,7 +27,31 @@ header {
 .header-nav {
     margin-right: 1rem;
     display: flex;
-    color: var(--muted-text);
+    color: var(--main-text);
+}
+
+.cart-icon {
+    margin-right: 2rem;
+}
+
+.ticket-icon {
+    margin-right: 1rem;
+}
+
+.cart-icon-number {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    position: absolute;
+    color: black;
+    background-color: var(--accent);
+    border-radius: 5rem;
+    padding: 0.1rem 0.4rem;;
+    z-index: 1000;
+    font-size: 0.8rem;
+    top: 0.25rem;
+    right: 4.4rem;
+
+
 }
 
 .menu-bars {
@@ -39,6 +63,9 @@ header {
     display: none;
     margin-left: 1rem;
 }
+
+
+
 
 /* TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {

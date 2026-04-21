@@ -4,7 +4,7 @@ import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import TicketOption from "./TicketOption";
 import EventCardInfo from "./EventCardInfo";
 
-export default function EventModal({ event, basketQuantity, setBasketQuantity, basketTotal, setBasketTotal, eventModalVisible, setEventModalVisible }) {
+export default function EventModal({ event, addToBasketQuantity, setAddToBasketQuantity, basket, setBasket, eventModalVisible, setEventModalVisible }) {
     
     const ticketOptions = [
         {
@@ -27,32 +27,43 @@ export default function EventModal({ event, basketQuantity, setBasketQuantity, b
         },
     ];
 
+
     const [activeTicketType, setActiveTicketType] = useState(ticketOptions[0]);
-    const addToBasketTotal = activeTicketType.price * basketQuantity;
+    const addToBasketTotal = activeTicketType.price * addToBasketQuantity;
 
     const handleSetActiveTicketType = (e) => {
         setActiveTicketType(e)
     };
 
     const handleSetAddToBasketTotal = () => {
-        setAddToBasketTotal(activeTicketType.price * basketQuantity)
+        setAddToBasketTotal(activeTicketType.price * addToBasketQuantity)
     };
 
     const handleAddBasketQuantity = () => {
-        setBasketQuantity(prev => prev + 1)
+        setAddToBasketQuantity(prev => prev < 6 ? prev + 1 : 6)
     };
 
     const handleSubtractBasketQuantity = () => {
-        setBasketQuantity(prev => prev > 1 ? prev - 1 : 1)
+        setAddToBasketQuantity(prev => prev > 1 ? prev - 1 : 1)
     };
 
     const handleAddToBasket = () => {
-        setBasketTotal
+        const ticket = {
+            event: event,
+            ticketType: activeTicketType.title,
+            price: activeTicketType.price,
+            quantity: addToBasketQuantity,
+        }
+        setBasket(prev => [...prev, ticket]);
+        setEventModalVisible(false);
+        setAddToBasketQuantity(2);
     }
+
+    
 
     useEffect(() => {
         setActiveTicketType(ticketOptions[0])
-        setBasketQuantity(2);
+        setAddToBasketQuantity(2);
             }, [event]);
 
     return (
@@ -104,7 +115,7 @@ export default function EventModal({ event, basketQuantity, setBasketQuantity, b
                                 >-</div>
                                 <div
                                     className="event-modal-basket-show-quantity"
-                                >{basketQuantity}</div>
+                                >{addToBasketQuantity}</div>
                                 <div
                                     className="event-modal-basket-change-quantity-add"
                                 onClick={handleAddBasketQuantity}

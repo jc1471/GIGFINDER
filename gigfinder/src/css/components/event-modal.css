@@ -176,16 +176,14 @@
 .event-modal-basket-change-quantity-add {
     padding: 0.5rem 0.8rem;
     background-color: var(--bg-card);
-    
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0 1rem 1rem 0;
     border: 1px solid var(--muted-grey);
 }
 
 .event-modal-basket-change-quantity-subtract {
     padding: 0.5rem 0.8rem;
     background-color: var(--bg-card);
-    
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 1rem 0 0 1rem;
     border: 1px solid var(--muted-grey);
 }
 

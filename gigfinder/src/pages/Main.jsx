@@ -8,10 +8,9 @@ import events from "../data/eventData";
 import useFilter from "../hooks/useFilterList";
 import EventModal from "../components/EventModal";
 
-export default function Main() {
+export default function Main({ basket, setBasket, eventModalVisible, setEventModalVisible }) {
 
-    const [basketQuantity, setBasketQuantity] = useState(2);
-    const [basketTotal, setBasketTotal] = useState(0);
+    const [addToBasketQuantity, setAddToBasketQuantity] = useState(2);
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({
         artist: "",
@@ -19,8 +18,6 @@ export default function Main() {
         genre: "",
     });
     const [selectedEvent, setSelectedEvent] = useState("");
-
-    const [eventModalVisible, setEventModalVisible] = useState(false);
 
     const handleOpenEventModal = (event) => {
         setSelectedEvent(event);
@@ -52,14 +49,16 @@ export default function Main() {
         return matchesQuery && matchesFilters;
     });
 
+    const [myTickets, setMyTickets] = useState([]);
+
     const displayEvents = filteredEvents.map(event =>
     <EventCard
         key={event.id}
         event={event}
-        basketQuantity={basketQuantity}
-        setBasketQuantity={setBasketQuantity}
-        basketTotal={basketTotal}
-        setBasketTotal={setBasketTotal}
+        addToBasketQuantity={addToBasketQuantity}
+        setAddToBasketQuantity={setAddToBasketQuantity}
+        basket={basket}
+        setBasket={setBasket}
         selectedEvent={selectedEvent}
         setSelectedEvent={setSelectedEvent}
         handleOpenEventModal={handleOpenEventModal}
@@ -85,10 +84,10 @@ export default function Main() {
             </div>
             <EventModal
                 event={selectedEvent}
-                basketQuantity={basketQuantity}
-                setBasketQuantity={setBasketQuantity}
-                basketTotal={basketTotal}
-                setBasketTotal={setBasketTotal}
+                addToBasketQuantity={addToBasketQuantity}
+                setAddToBasketQuantity={setAddToBasketQuantity}
+                basket={basket}
+                setBasket={setBasket}
                 eventModalVisible={eventModalVisible}
                 setEventModalVisible={setEventModalVisible}
             />

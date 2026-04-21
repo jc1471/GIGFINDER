@@ -1,0 +1,33 @@
+.my-tickets {
+    position: fixed;
+    color: var(--main-text);
+    background-color: var(--bg-card);
+    border: 2px solid var(--accent);
+    border-radius: 1rem;
+    top: 5svh;
+    justify-self: center;
+    height: 50svh;
+    width: 80%;
+    z-index: 200;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.my-tickets-title {
+
+}
+
+.my-ticket-items-container {
+    font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.my-tickets-item {
+    border-bottom: 1px solid var(--muted-accent);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}

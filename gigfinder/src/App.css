@@ -1,11 +1,13 @@
-@import "./css/header.css";
+@import "./css/components/header.css";
 @import "./css/components/hero.css";
-@import "./css/searchBar.css";
-@import "./css/filters.css";
-@import "./css/components//search-results-header.css";
+@import "./css/components/search-bar.css";
+@import "./css/components/filters.css";
+@import "./css/components/search-results-header.css";
 @import "./css/components/event-card.css";
 @import "./css/components/add-to-basket.css";
-@import "./css/components//event-modal.css";
+@import "./css/components/event-modal.css";
+@import "./css/components/basket.css";
+@import "./css/components/my-tickets.css";
 
 
 .playfair-display {

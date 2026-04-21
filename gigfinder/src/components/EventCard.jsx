@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import AddToCart from "./AddToBasket";
 import EventCardInfo from "./EventCardInfo";
 
-export default function EventCard({ event, basketQuantity, setBasketQuantity, basketTotal, setBasketTotal, handleOpenEventModal }) {
+export default function EventCard({ event, addToBasketQuantity, setAddToBasketQuantity, basket, setBasket, handleOpenEventModal }) {
 
     return (
         <>
