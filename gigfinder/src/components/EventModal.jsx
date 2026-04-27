@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import TicketOption from "./TicketOption";
 import EventCardInfo from "./EventCardInfo";
+import useConvertDate from "../hooks/useConvertDate";
 
 export default function EventModal({ event, addToBasketQuantity, setAddToBasketQuantity, basket, setBasket, eventModalVisible, setEventModalVisible }) {
     
@@ -11,32 +12,32 @@ export default function EventModal({ event, addToBasketQuantity, setAddToBasketQ
             title: "General Admission",
             id: "general",
             description: "Standing · Main floor access",
-            price: Number(event.price),
+            price: (Number(event.price)).toFixed(2),
         },
         {
             title: "Priority",
             id: "priority",
             description: "Priority queue · Early access",
-            price: Number(event.price) * 1.2,
+            price: (Number(event.price) * 1.2).toFixed(2),
         },
         {
             title: "VIP Balcony",
             id: "vip",
             description: "Reserved Seating · Private bar access",
-            price: Number(event.price) * 2.25,
+            price: (Number(event.price) * 2.25).toFixed(2),
         },
     ];
 
 
     const [activeTicketType, setActiveTicketType] = useState(ticketOptions[0]);
-    const addToBasketTotal = activeTicketType.price * addToBasketQuantity;
+    const addToBasketTotal = (activeTicketType.price * addToBasketQuantity).toFixed(2);
 
     const handleSetActiveTicketType = (e) => {
         setActiveTicketType(e)
     };
 
     const handleSetAddToBasketTotal = () => {
-        setAddToBasketTotal(activeTicketType.price * addToBasketQuantity)
+        setAddToBasketTotal((activeTicketType.price * addToBasketQuantity).toFixed(2));
     };
 
     const handleAddBasketQuantity = () => {
@@ -59,7 +60,8 @@ export default function EventModal({ event, addToBasketQuantity, setAddToBasketQ
         setAddToBasketQuantity(2);
     }
 
-    
+    const extrapolatedDate = useConvertDate(event.date);
+    const convertedDate = `${extrapolatedDate[0]}.${extrapolatedDate[1]}.${extrapolatedDate[2]}`; 
 
     useEffect(() => {
         setActiveTicketType(ticketOptions[0])
@@ -85,7 +87,7 @@ export default function EventModal({ event, addToBasketQuantity, setAddToBasketQ
                             <EventCardInfo title="venue" info={event.venue} />
                             <EventCardInfo title="city" info={event.city} flag={event.country} />
                             <EventCardInfo title="doors" info={event.time} />
-                            <EventCardInfo title="date" info={`${event.day}, ${event.date}`}/>
+                            <EventCardInfo title="date" info={`${event.dayOfWeek}, ${convertedDate}`}/>
                         </div>
                     </div>
                     <div className="event-modal-about-artist">

@@ -1,8 +1,9 @@
 export default function Basket({ basketViewActive, setBasketViewActive, basket, setBasket, setMyTickets, setEventModalVisible }) {
 
-    const checkoutTotal = basket.reduce((total, ticket) => {
+    const checkoutTotal = basket.reduce((total, ticket) => {    
         return total + (ticket.price * ticket.quantity);
     }, 0);
+    const formattedCheckoutTotal = checkoutTotal.toFixed(2);
 
     const handleCompletePurchase = () => {
         setMyTickets(prev => [...prev, ...basket])
@@ -27,7 +28,7 @@ export default function Basket({ basketViewActive, setBasketViewActive, basket, 
                         onClick={handleCompletePurchase}    
                     >
                         <h3 className="complete-purchase">Complete Purchase</h3>
-                        <h3 className="checkout-total">€{checkoutTotal}</h3>
+                        <h3 className="checkout-total">€{formattedCheckoutTotal}</h3>
                     </div>
                 </div> 
             )}

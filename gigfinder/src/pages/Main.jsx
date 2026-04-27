@@ -5,7 +5,7 @@ import FilterSection from "../components/FilterSection";
 import SearchResultsHeader from "../components/SearchResultsHeader";
 import EventCard from "../components/EventCard";
 import events from "../data/eventData";
-import useFilter from "../hooks/useFilterList";
+import useFilter from "../hooks/useFilterListByString";
 import EventModal from "../components/EventModal";
 
 export default function Main({ basket, setBasket, eventModalVisible, setEventModalVisible }) {
@@ -17,7 +17,7 @@ export default function Main({ basket, setBasket, eventModalVisible, setEventMod
         city: "",
         genre: "",
     });
-    const [selectedEvent, setSelectedEvent] = useState("");
+    const [selectedEvent, setSelectedEvent] = useState(events[0]);
 
     const handleOpenEventModal = (event) => {
         setSelectedEvent(event);
@@ -60,7 +60,7 @@ export default function Main({ basket, setBasket, eventModalVisible, setEventMod
         basket={basket}
         setBasket={setBasket}
         selectedEvent={selectedEvent}
-        setSelectedEvent={setSelectedEvent}
+
         handleOpenEventModal={handleOpenEventModal}
             
     />

@@ -27,6 +27,7 @@
 }
 
 .event-card-genre {
+  width:fit-content;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
@@ -58,10 +59,16 @@
   font-style: italic;
 }
 
+.event-card-day {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+
 .event-card-date {
     font-family: "Playfair Display", serif;
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
 }
 
 .event-card-info-grid-container {

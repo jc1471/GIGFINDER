@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import AddToCart from "./AddToBasket";
 import EventCardInfo from "./EventCardInfo";
+import useConvertDate from "../hooks/useConvertDate";
 
 export default function EventCard({ event, addToBasketQuantity, setAddToBasketQuantity, basket, setBasket, handleOpenEventModal }) {
+
+    const extrapolatedDate = useConvertDate(event.date);
+    const convertedDate = `${extrapolatedDate[0]}.${extrapolatedDate[1]}.${extrapolatedDate[2]}`; 
 
     return (
         <>
@@ -17,8 +21,8 @@ export default function EventCard({ event, addToBasketQuantity, setAddToBasketQu
                                 <h2 className="event-card-tour">european tour</h2>
                             </div>
                             <div className="event-card-header-right">
-                                <h3 className="event-card-day">{event.day},</h3>
-                                <h3 className="event-card-date">{event.date}</h3>
+                                <h3 className="event-card-day">{event.dayOfWeek}</h3>
+                                <h3 className="event-card-date">{convertedDate}</h3>
                             </div>
                         </div>
                         <div className="event-card-info-grid-container">
