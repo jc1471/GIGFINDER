@@ -5,7 +5,7 @@ import TicketOption from "./TicketOption";
 import EventCardInfo from "./EventCardInfo";
 import useConvertDate from "../hooks/useConvertDate";
 
-export default function EventModal({ event, addToBasketQuantity, setAddToBasketQuantity, basket, setBasket, eventModalVisible, setEventModalVisible }) {
+export default function EventModal({ event, addToBasketQuantity, setAddToBasketQuantity, basket, setBasket, eventModalVisible, setEventModalVisible, artistData, setArtistData, loading, setLoading }) {
     
     const ticketOptions = [
         {
@@ -63,11 +63,28 @@ export default function EventModal({ event, addToBasketQuantity, setAddToBasketQ
     const extrapolatedDate = useConvertDate(event.date);
     const convertedDate = `${extrapolatedDate[0]}.${extrapolatedDate[1]}.${extrapolatedDate[2]}`; 
 
+    
+    const [error, setError] = useState(null);
+
     useEffect(() => {
         setActiveTicketType(ticketOptions[0])
         setAddToBasketQuantity(2);
-            }, [event]);
+        setArtistData(null);
 
+        // Artist Data API call
+        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${event.artist}&api_key=${import.meta.env.VITE_LASTFM_API_KEY}&format=json`)
+            .then(response => response.json())
+            .then(json => {
+                setArtistData(json);
+                setLoading(false);
+            })
+            .catch(err => {
+                setError(err.message);
+                setLoading(false);
+            });
+    }, [event]);
+    
+    
     return (
         <>
             {eventModalVisible && (
@@ -78,6 +95,7 @@ export default function EventModal({ event, addToBasketQuantity, setAddToBasketQ
                         icon={faCircleXmark}
                         onClick={() => setEventModalVisible(false)}
                     />
+
                     <div className="event-modal-header">
                         <h1 className="event-modal-artist-name">{event.artist}</h1>
                         <h2 className="event-modal-tour">european tour</h2>
@@ -92,7 +110,13 @@ export default function EventModal({ event, addToBasketQuantity, setAddToBasketQ
                     </div>
                     <div className="event-modal-about-artist">
                         <h2 className="event-modal-about-artist-title">ABOUT THE ARTIST</h2>
-                        <p className="event-modal-about-artist-info">Some text about this artist... </p>
+                        {loading ? (
+                            <p>Loading...</p>
+                        ) : artistData?.artist?.bio?.content ? (
+                            <p className="event-modal-about-artist-info">{artistData.artist.bio.content}</p>
+                        ) : (
+                            <p className="event-modal-about-artist-info">Artist bio coming soon...</p>
+                        )}
                     </div>
                     <div className="event-modal-artist-photos">
 

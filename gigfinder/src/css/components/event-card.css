@@ -1,8 +1,15 @@
 .events-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
     background-color: var(--bg-elevated);
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    
 }
 
 .event-card {
@@ -11,6 +18,7 @@
     width: 25rem;
     border-bottom: solid 1px var(--muted-grey);
     font-size: 0.5rem;
+    justify-self: center;
 }
 
 .event-card-content {
